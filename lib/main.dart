@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/register',
       routes: AppRoute.routes,
     );
   }

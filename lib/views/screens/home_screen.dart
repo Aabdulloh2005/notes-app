@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lesson53_todo/models/note.dart';
 import 'package:lesson53_todo/utils/routes.dart';
 import 'package:lesson53_todo/viewmodels/note_viewmodel.dart';
-import 'package:lesson53_todo/views/screens/note_field.dart';
 import 'package:lesson53_todo/views/widgets/note_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -108,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           }
 
-          final notes = snapshot.data as List<Note>?;
+          final notes = snapshot.data;
           return notes == null || notes.isEmpty
               ? const Center(
                   child: Text("No notes available."),
