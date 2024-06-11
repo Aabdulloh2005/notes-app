@@ -37,12 +37,12 @@ class AuthHttpService {
       await sharedPreferences.setString("token", data['idToken']);
       await sharedPreferences.setString("userId", data['localId']);
 
-      // DateTime expiryDate = DateTime.now().add(
-      //   Duration(
-      //     seconds: int.parse(data['expiresIn']),
-      //   ),
-      // );
-      // await sharedPreferences.setString('expiryDate', expiryDate.toString());
+    DateTime expiryDate = DateTime.now().add(
+        Duration(
+          seconds: int.parse(data['expiresIn']),
+        ),
+      );
+      await sharedPreferences.setString('expiryDate', expiryDate.toString());
     } catch (e) {
       rethrow;
     }
